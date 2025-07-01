@@ -1,0 +1,3 @@
+JavaScript runs on web browsers with the help of JavaScript engines. Each browser has its seprate JS engine like Chrome has V8 engine , Fire Fox has spider monkey , safari has Javsascipt code and ms edge has chakra. 
+To run JS outside the browser we need Node JS which provides the runtime environment for JS to run. Node JS is written in C++.
+
