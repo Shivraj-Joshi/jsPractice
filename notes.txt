@@ -10,4 +10,5 @@ const and let are blocked scope and var is global scoped , lexical scope??
 javascript is both Client-side as well as server-side language. because of which it can be used for both Frontend and backend. 
 
 in the start JavaScript was called LiveScript but dues its similarities in naming conventions ,basic control flow and expression syntex , with JAVA, it was renamed to JavaScript and it is the reason its called JavaScript.
-   
+
+console.log('9'*6) will print the result which is 54 (which is the multiplication of number 9 and number 6) , this is because the string ('9') will be converted to a number and the operation will be performed.    
