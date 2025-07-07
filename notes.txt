@@ -1,3 +1,13 @@
 JavaScript runs on web browsers with the help of JavaScript engines. Each browser has its seprate JS engine like Chrome has V8 engine , Fire Fox has spider monkey , safari has Javsascipt code and ms edge has chakra. 
 To run JS outside the browser we need Node JS which provides the runtime environment for JS to run. Node JS is written in C++.
 
+execution context ??  , Window and this ?? , what is temporal dead zone . 
+
+hoisting works for var (keyword) but not for const and let.
+
+const and let are blocked scope and var is global scoped , lexical scope??
+
+javascript is both Client-side as well as server-side language. because of which it can be used for both Frontend and backend. 
+
+in the start JavaScript was called LiveScript but dues its similarities in naming conventions ,basic control flow and expression syntex , with JAVA, it was renamed to JavaScript and it is the reason its called JavaScript.
+   
