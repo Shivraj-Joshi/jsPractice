@@ -7,7 +7,7 @@
 
 //--------------------------------------------------------------------------------------------------------
 // c = 100;
-a = 66;
+// a = 66;
 
 
 
@@ -17,6 +17,28 @@ var c; // reassigning is allowed , hoisting is allowed.
 
 // b = "Lannister always pays its debt"
 
-console.log(a);
+// console.log(a);
 // console.log(b);
 // console.log(c);
+
+//----------------------------------------------------------------------------------------------------------------
+
+/* temporal dead zone and variable hoisting */
+
+// {
+//     // TDZ starts at beginning of scope
+//     const func = () => console.log(letVar); // OK
+
+//     // Within the TDZ letVar access throws `ReferenceError`
+
+//     let letVar = 3; // End of TDZ (for letVar)
+//     func();  // Called outside TDZ!
+// }
+
+// --------------------------------------------------------------------------------------------------------------------
+
+let str = "winter"
+let str2 = str.split('');
+console.log(str2);
+let rev = str2.reverse();
+console.log(rev);
