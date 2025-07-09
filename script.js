@@ -37,8 +37,38 @@ var c; // reassigning is allowed , hoisting is allowed.
 
 // --------------------------------------------------------------------------------------------------------------------
 
-let str = "winter"
-let str2 = str.split('');
-console.log(str2);
-let rev = str2.reverse();
-console.log(rev);
+// let str = "winter"
+// let str2 = str.split('');
+// console.log(str2);
+// let rev = str2.reverse();
+// console.log(rev);
+
+// -----------------------------------------------------Conditional statement-----------------------------------------------------
+
+
+// let str = "Nitin"
+// let str2 = str.split('')
+
+// let rev = str2.reverse().join('');
+
+// if (str === rev) {
+//     console.log("palindrome")
+// } else {
+//     console.log("Not a palindrome")
+// }
+
+//-----------------------------------------------------conditional loop-------------------------------------------------------------
+
+let i = 1;
+
+for (i; i <= 100; i++) {
+    if (i % 15 == 0) {
+        console.log('buzzzFuzzz')
+    } else if (i % 3 == 0) {
+        console.log('buzzz')
+    } else if (i % 5 == 0) {
+        console.log('Fuzzzz')
+    } else {
+        console.log(i);
+    }
+};
