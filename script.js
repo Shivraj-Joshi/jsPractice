@@ -59,16 +59,28 @@ var c; // reassigning is allowed , hoisting is allowed.
 
 //-----------------------------------------------------conditional loop-------------------------------------------------------------
 
-let i = 1;
+// let i = 1;
 
-for (i; i <= 100; i++) {
-    if (i % 15 == 0) {
-        console.log('buzzzFuzzz')
-    } else if (i % 3 == 0) {
-        console.log('buzzz')
-    } else if (i % 5 == 0) {
-        console.log('Fuzzzz')
-    } else {
-        console.log(i);
+// for (i; i <= 100; i++) {
+//     if (i % 15 == 0) {
+//         console.log('buzzzFuzzz')
+//     } else if (i % 3 == 0) {
+//         console.log('buzzz')
+//     } else if (i % 5 == 0) {
+//         console.log('Fuzzzz')
+//     } else {
+//         console.log(i);
+//     }
+// };
+
+//---------------------------------------------------loops-----------------------------------------------------------------
+
+
+let res = 1;
+function fact(n) {
+    for (let i = 1; i <= n; i++) {
+        res *= i;
     }
-};
+    return res;
+}
+console.log(fact(5))
