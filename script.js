@@ -85,6 +85,7 @@
 // }
 // console.log(fact(5))
 
+//======================================================to-do=========================================================================
 
 const takeInput = document.getElementById('takeInput');
 const addTask = document.getElementById('addTask');
@@ -95,55 +96,112 @@ const taskList = document.getElementById('taskList');
 // console.log(taskText);
 
 
-let tasks = [];
+// let tasks = [];
 
+
+// addTask.addEventListener('click', () => {
+//     const taskText = takeInput.value.trim();
+
+
+//     if (taskText !== '') {
+//         tasks = [...tasks, taskText];
+//         takeInput.value = "";
+//         renderTasks();
+
+
+// const listItem = document.createElement('li');
+// listItem.textContent = taskText;
+
+
+// const deleteBtn = document.createElement('button');
+// deleteBtn.textContent = ' Delete';
+// deleteBtn.classList.add('delete-btn');
+// listItem.appendChild(deleteBtn);
+
+// taskList.appendChild(listItem);
+// takeInput.value = '';
+
+// deleteBtn.addEventListener('click', () => {
+//     taskList.removeChild(listItem);
+// })
+
+//     }
+// })
+
+// function renderTasks() {
+//     taskList.innerHTML = "";
+//     tasks.forEach((task, index) => {
+//         const listItem = document.createElement('li');
+//         listItem.textContent = task;
+
+//         const deleteBtn = document.createElement('button');
+//         deleteBtn.textContent = ' Delete';
+//         deleteBtn.classList.add('delete-btn');
+
+//         deleteBtn.addEventListener('click', () => {
+//             taskList.removeChild(listItem);
+//         })
+
+//         listItem.appendChild(deleteBtn);
+//         taskList.appendChild(listItem);
+
+
+//     })
+// }
+
+
+// let tasks = [];
+
+// addTask.addEventListener('click', () => {
+//     const taskText = takeInput.value.trim();
+
+
+//     if (taskText !== "") {
+//         tasks = [...tasks, taskText];
+//         takeInput.value = "";
+//         renderTasks();
+//     }
+
+// })
+
+// function renderTasks() {
+//     taskList.innerHTML = "";
+//     tasks.forEach((task, index) => {
+//         const li = document.createElement('li');
+//         li.textContent = task;
+
+//         const deletebtn = document.createElement('button');
+//         deletebtn.textContent = "Delete"
+//         deletebtn.classList.add('delete-btn')
+
+//         deletebtn.addEventListener('click', () => {
+//             taskList.removeChild(li);
+//         })
+
+//         li.appendChild(deletebtn);
+//         taskList.append(li);
+//     })
+
+// }
+
+
+//=====================================================palindrome checker==================================================================
 
 addTask.addEventListener('click', () => {
-    const taskText = takeInput.value.trim();
+    let str = takeInput.value.trim();
+    console.log(str); //for debugging purpose 
+    let str2 = str.split('');
+    let rev = str2.reverse().join('');
+    console.log(rev); //for debugging purpose 
 
+    let li = document.createElement('li');
+    if (str == rev) {
+        li.innerHTML = "It is a Pallindrom word"
 
-    if (taskText !== '') {
-        tasks = [...tasks, taskText];
-        takeInput.value = "";
-        renderTasks();
-
-
-        // const listItem = document.createElement('li');
-        // listItem.textContent = taskText;
-
-
-        // const deleteBtn = document.createElement('button');
-        // deleteBtn.textContent = ' Delete';
-        // deleteBtn.classList.add('delete-btn');
-        // listItem.appendChild(deleteBtn);
-
-        // taskList.appendChild(listItem);
-        // takeInput.value = '';
-
-        // deleteBtn.addEventListener('click', () => {
-        //     taskList.removeChild(listItem);
-        // })
-
+    } else {
+        li.innerHTML = "It is not a pallindrom word , try another word"
     }
+
+    taskList.appendChild(li);
 })
 
-function renderTasks() {
-    taskList.innerHTML = "";
-    tasks.forEach((task, index) => {
-        const listItem = document.createElement('li');
-        listItem.textContent = task;
-
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = ' Delete';
-        deleteBtn.classList.add('delete-btn');
-
-        deleteBtn.addEventListener('click', () => {
-            taskList.removeChild(listItem);
-        })
-
-        listItem.appendChild(deleteBtn);
-        taskList.appendChild(listItem);
-
-
-    })
-}
