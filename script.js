@@ -87,9 +87,9 @@
 
 //======================================================to-do=========================================================================
 
-const takeInput = document.getElementById('takeInput');
-const addTask = document.getElementById('addTask');
-const taskList = document.getElementById('taskList');
+// const takeInput = document.getElementById('takeInput');
+// const addTask = document.getElementById('addTask');
+// const taskList = document.getElementById('taskList');
 
 
 // const taskText = takeInput.value.trim();
@@ -187,21 +187,54 @@ const taskList = document.getElementById('taskList');
 
 //=====================================================palindrome checker==================================================================
 
-addTask.addEventListener('click', () => {
-    let str = takeInput.value.trim();
-    console.log(str); //for debugging purpose 
-    let str2 = str.split('');
-    let rev = str2.reverse().join('');
-    console.log(rev); //for debugging purpose 
+// addTask.addEventListener('click', () => {
+//     let str = takeInput.value.trim();
+//     console.log(str); //for debugging purpose 
+//     let str2 = str.split('');
+//     let rev = str2.reverse().join('');
+//     console.log(rev); //for debugging purpose 
 
-    let li = document.createElement('li');
-    if (str == rev) {
-        li.innerHTML = "It is a Pallindrom word"
+//     let li = document.createElement('li');
+//     if (str == rev) {
+//         li.innerHTML = "It is a Pallindrom word"
 
-    } else {
-        li.innerHTML = "It is not a pallindrom word , try another word"
-    }
+//     } else {
+//         li.innerHTML = "It is not a pallindrom word , try another word"
+//     }
 
-    taskList.appendChild(li);
-})
+//     taskList.appendChild(li);
+// })
+
+//===========================================================basic counter==============================================================
+
+let counter = 10;
+
+const increaseBtn = document.createElement('button');
+increaseBtn.textContent = 'increase';
+increaseBtn.classList.add('increase');
+document.body.appendChild(increaseBtn);
+
+
+const decreaseBtn = document.createElement('button');
+decreaseBtn.textContent = 'increase';
+decreaseBtn.classList.add('increase');
+document.body.appendChild(decreaseBtn);
+
+let p = document.createElement('p');
+p.innerHTML = `count : ${counter}`;
+p.classList.add('text');
+document.body.appendChild(p);
+
+increaseBtn.addEventListener('click', () => {
+    counter += 1
+    console.log(counter);
+    p.innerHTML = `count : ${counter}`;
+
+});
+decreaseBtn.addEventListener('click', () => {
+    counter -= 1
+    console.log(counter);
+    p.innerHTML = `count : ${counter}`;
+
+});
 
