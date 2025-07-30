@@ -241,51 +241,64 @@
 //=======================================counter wrapped inside IIFE(Imidiatly Invoked Function Expression)===============================
 
 
-(function () {
-    let counter = 0;
+// (function () {
+//     let counter = 0;
 
-    // increase button 
+//     // increase button 
 
-    const increaseBtn = document.createElement('button');
-    increaseBtn.classList.add('increase');
-    increaseBtn.innerHTML = 'increase';
-    document.body.appendChild(increaseBtn);
+//     const increaseBtn = document.createElement('button');
+//     increaseBtn.classList.add('increase');
+//     increaseBtn.innerHTML = 'increase';
+//     document.body.appendChild(increaseBtn);
 
-    // reset button 
+//     // reset button 
 
-    const resetBtn = document.createElement('button');
-    resetBtn.classList.add('reset');
-    resetBtn.innerHTML = 'reset';
-    document.body.appendChild(resetBtn);
-
-
-    //decrease button
-
-    const decreaseBtn = document.createElement('button');
-    decreaseBtn.classList.add('decrease');
-    decreaseBtn.innerHTML = 'decrease';
-    document.body.appendChild(decreaseBtn);
+//     const resetBtn = document.createElement('button');
+//     resetBtn.classList.add('reset');
+//     resetBtn.innerHTML = 'reset';
+//     document.body.appendChild(resetBtn);
 
 
-    //paragraph
+//     //decrease button
 
-    let p = document.createElement('p');
-    p.innerHTML = `count : ${counter}`;
-    p.classList.add('text');
-    document.body.appendChild(p);
+//     const decreaseBtn = document.createElement('button');
+//     decreaseBtn.classList.add('decrease');
+//     decreaseBtn.innerHTML = 'decrease';
+//     document.body.appendChild(decreaseBtn);
 
-    function updateCount(change) {
-        counter += change;
-        console.log(counter);
-        p.innerHTML = `count is : ${counter}`
-    }
 
-    increaseBtn.addEventListener('click', () => updateCount(+1))
-    decreaseBtn.addEventListener('click', () => updateCount(-1))
-    resetBtn.addEventListener('click', () => {
-        counter = 0;
-        console.log(counter)
-        p.innerHTML = `count is : ${counter}`
-    })
+//     //paragraph
 
-}())
+//     let p = document.createElement('p');
+//     p.innerHTML = `count : ${counter}`;
+//     p.classList.add('text');
+//     document.body.appendChild(p);
+
+//     function updateCount(change) {
+//         counter += change;
+//         console.log(counter);
+//         p.innerHTML = `count is : ${counter}`
+//     }
+
+//     increaseBtn.addEventListener('click', () => updateCount(+1))
+//     decreaseBtn.addEventListener('click', () => updateCount(-1))
+//     resetBtn.addEventListener('click', () => {
+//         counter = 0;
+//         console.log(counter)
+//         p.innerHTML = `count is : ${counter}`
+//     })
+
+// }())
+
+//======================================callback function practice========================================================================
+
+function greet() {
+    console.log('hello, shivraj');
+}
+
+function callGreet(callback) {
+    callback();
+    console.log('done calling callback')
+}
+
+callGreet(greet);
